@@ -1,16 +1,19 @@
 <template>
   <div>
     <MyComponent></MyComponent>
+    <!-- <RegisterForms></RegisterForms> -->
   </div>
 </template>
 
 <script>
 import MyComponent from "./components/MyComponent.vue";
+// import RegisterForms from "./components/RegisterForms.vue";
 
 export default {
   name: "App",
   components: {
     MyComponent,
+    // RegisterForms,
   },
 };
 </script>
