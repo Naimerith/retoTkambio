@@ -32,6 +32,9 @@
         <div class="description_reports">
           <p class="text_description">Descripción del reporte</p>
           <input type="text" v-model="description" /><br />
+          <div class="msgError" v-if="submited">
+            El campo descripción del reporte es obligatorio
+          </div>
         </div>
         <p class="text_birthdat">Fecha de nacimiento</p>
         <div class="container_date">
@@ -61,6 +64,7 @@ export default {
   data() {
     return {
       modal: false,
+      submited: false,
       description: "",
       startDate: "",
       endDate: "",
@@ -78,6 +82,10 @@ export default {
       }
     },
     generate() {
+      this.submited = true;
+      if (this.description === "") {
+        return false;
+      }
       const registers = {
         description: this.description,
         startDate: this.startDate,
@@ -93,6 +101,7 @@ export default {
 
       arrayTemp.push(registers);
       localStorage.setItem("addRegisters", JSON.stringify(arrayTemp));
+      this.submited = "";
       this.description = "";
       this.startDate = "";
       this.endDate = "";
@@ -209,6 +218,13 @@ input {
   line-height: 16px;
   color: #9b9090;
   letter-spacing: 0.2px;
+}
+.msgError {
+  color: red;
+  margin: -17px 0 10px 10px;
+  font-family: "Argentum Sans";
+  font-size: 10px;
+  font-style: italic;
 }
 .description_reports,
 .date {
