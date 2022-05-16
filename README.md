@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # reto_tkambio
 
 Estimado(a), Muchas gracias por tomar tu valioso tiempo en llevar a cabo este challenge. Como desarrolladores sabemos que es tedioso, así que tratamos de simplificarlo para que en el menor tiempo posible puedas demostrar tus asombrosas habilidades.
