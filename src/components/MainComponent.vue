@@ -9,7 +9,7 @@
         <thead>
           <tr>
             <th>Titulo</th>
-            <th>Fecha de creación</th>
+            <th>Fecha de creacion</th>
             <th>Acción</th>
           </tr>
         </thead>
